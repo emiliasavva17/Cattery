@@ -1,5 +1,5 @@
 async function fetchData() {
-  const response = await fetch("/cats.json");
+  const response = await fetch("../cats.json");
   const data = await response.json();
 
   return data;
@@ -161,9 +161,9 @@ function showDetailView(id) {
   document.querySelector("#detail-view-container").innerHTML = /*html*/ `
     <div class="info_container ">
       <div class="pyramids_H1">
-        <img class="pyramid" src="/img/Component 13 – 2.png" alt="" />
+        <img class="pyramid" src="img/Component 13 – 2.png" alt="" />
         <p class="pagesH1">${catToShow.name}</p>
-        <img class="pyramid" src="/img/Component 13 – 2.png" alt="" />
+        <img class="pyramid" src="img/Component 13 – 2.png" alt="" />
     </div> 
     </div> <br>
     <div class="round_container detail_card">
