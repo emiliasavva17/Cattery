@@ -675,7 +675,7 @@ div#text p {
   /* min-height: calc(100vh - 200px); */
 }
 .modalImg {
-  background-image: url("img/formCat.png");
+  background-image: url("../img/formCat.png");
 
   background-position: center;
   background-repeat: no-repeat;
