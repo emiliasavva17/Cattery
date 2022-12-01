@@ -9,7 +9,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/king1.png",
+    "image": "img/king1.png",
     "who": "king",
     "price": 1300
   },
@@ -23,7 +23,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/king2.png",
+    "image": "img/king2.png",
     "who": "king",
     "price": 1250
   },
@@ -37,7 +37,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/king3.png",
+    "image": "img/king3.png",
     "who": "king",
     "price": 1350
   },
@@ -52,7 +52,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/queen1.png",
+    "image": "img/queen1.png",
     "who": "queen",
     "price": 1400
   },
@@ -66,7 +66,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/queen2.png",
+    "image": "img/queen2.png",
     "who": "queen",
     "price": 1600
   },
@@ -80,7 +80,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/queen3.png",
+    "image": "img/queen3.png",
     "who": "queen",
     "price": 1400
   },
@@ -94,7 +94,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/queen4.png",
+    "image": "img/queen4.png",
     "who": "queen",
     "price": 1500
   },
@@ -108,7 +108,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/queen5.png",
+    "image": "img/queen5.png",
     "who": "queen",
     "price": 1350
   },
@@ -122,7 +122,7 @@
     "SQR_LOOF": "Registered",
     "FELV_test": "negative",
     "PKD_test": "negative",
-    "image": "/img/queen6.png",
+    "image": "img/queen6.png",
     "who": "queen",
     "price": 1600
   },
@@ -136,7 +136,7 @@
     "Color": "Seal point",
     "Litter": "Regina X Rama, Litter C",
 
-    "image": "/img/Image 22.png",
+    "image": "img/Image 22.png",
     "who": "kitten",
     "status": "Available",
     "description": "Cadeyrn is a Seal point male from the litter C of Regina and Rama.His name means 'battle king' in Welsh and it certainly fits. He's very brave and is the first one to explore new things, climb high or investigate the danger. He's not the most social kitten, but loves cuddles. ",
@@ -154,7 +154,7 @@
     "Color": "Blue point mitted",
     "Litter": "Regina X Rama, Litter C",
 
-    "image": "/img/Image 23.png",
+    "image": "img/Image 23.png",
     "who": "kitten",
     "status": "Available",
     "description": "",
@@ -172,7 +172,7 @@
     "Color": "Seal point Bicolor",
     "Litter": "Regina X Rama, Litter C",
 
-    "image": "/img/Image 24.png",
+    "image": "img/Image 24.png",
     "who": "kitten",
     "status": "Reserved",
     "description": "Cleopatra is a Seal point Bicolor female from litter C of Regina and Rama.<br> She is the princess of the litter, knowing exactly how to use her cuteness to get her extra treats and cuddles. <br> Cleo is very affectionate and once she decides your her human, she's never letting you out of her sight.",
@@ -190,7 +190,7 @@
     "Color": "Seal point mitted",
     "Litter": "Sisi X Anubis, Litter A",
 
-    "image": "/img/Image 27.png",
+    "image": "img/Image 27.png",
     "who": "kitten",
     "status": "Adopted",
     "price": 1500
@@ -204,7 +204,7 @@
     "Color": "Seal Bicolor",
     "Litter": "Sisi X Anubis, Litter A",
 
-    "image": "/img/Image 26.png",
+    "image": "img/Image 26.png",
     "who": "kitten",
     "status": "Adopted",
     "price": 1400
@@ -218,7 +218,7 @@
     "Color": "Seal point",
     "Litter": "Amunet X Anubis, Litter M",
 
-    "image": "/img/Image 25.png",
+    "image": "img/Image 25.png",
     "who": "kitten",
     "status": "Stays at the cattery",
     "price": 1400
@@ -232,7 +232,7 @@
     "Color": "Seal point mitted",
     "Litter": "Amunet X Anubis, Litter M",
 
-    "image": "/img/Image 29.png",
+    "image": "img/Image 29.png",
     "who": "kitten",
     "status": "Adopted",
     "price": 1600
@@ -246,7 +246,7 @@
     "Color": "Blue point mitted",
     "Litter": "Morrigan X Seti, Litter S",
 
-    "image": "/img/Image 30.png",
+    "image": "img/Image 30.png",
     "who": "kitten",
     "status": "Adopted",
     "price": 1400,
