@@ -47,6 +47,7 @@ function showPage(path) {
   } else {
     document.querySelector(".back").style.display = "none";
   }
+  console.log(_routes[path]);
   document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
   setActiveTab(path);
 }

@@ -11,13 +11,6 @@ async function initApp() {
 }
 initApp();
 
-function myfunc() {
-  let url = window.location.href.split("/");
-  //console.log("test url", window.location);
-  category = url[url.length - 1];
-  console.log(category);
-}
-document.querySelector("body").addEventListener("load", myfunc());
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -68,10 +61,7 @@ function appendCat(cats) {
         let dad_id = cat.dad_id;
         const mom = _cats.find((cat) => cat.id === mom_id);
         const dad = _cats.find((cat) => cat.id === dad_id);
-        //console.log(mom.id, "mom id");
-        console.log("kitten ", cat.name, "id ", cat.id);
-        console.log("mom ", mom.name, "id ", cat.mom_id);
-        //console.log("dad ", cat.name, "id ", cat.dad_id);
+
         document.querySelector("#kittens_for_adoption").innerHTML += /*html*/ `
         <div class="card space_bottom kitten_card" id="${cat.id + cat.name}" >
           <div>
@@ -268,9 +258,8 @@ async function submitForm() {
       .then(function(res) {
         return res.status;
       });
-    console.log("test res status ", testx);
+
     if (testx == "200") {
-      console.log("status ", testx);
       document.querySelector(".submit_form").style.display = "none";
       document.querySelector(".succeseful_message").style.display = "block";
     }
