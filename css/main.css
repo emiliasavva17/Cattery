@@ -365,19 +365,13 @@ footer {
   margin-top: 100px;
   background-color: #2c2c2c;
   color: #f7d590;
-  padding: 20px 7%;
+  padding: 20px 10px;
 }
-.footer_cols {
-  width: 100%;
-  display: none;
-  grid-template-columns: auto auto auto auto;
-  text-align: center;
-  grid-gap: 3%;
-  text-align: center;
+footer img {
+  max-height: 45px;
 }
-.footer_cols ul {
-  list-style: none;
-  padding: 0;
+footer p {
+  margin: 10px 0 0 0;
 }
 #copyright {
   text-align: center;
@@ -887,18 +881,7 @@ a.left.nav-link {
   font-weight: 800;
   margin: 0;
 }
-/* #kittens_for_adoption .kitten_card:nth-child(2n + 2) .hide_father,
-#kittens_for_adoption .kitten_card:nth-child(2) .hide_mother {
-  background-color: #40839f;
-  top: 28%;
-  left: 80%;
-  width: auto;
-} */
-/* #kittens_for_adoption .kitten_card:nth-child(n + 2) .hide_father {
-  background-color: #40839f;
-  top: 28%;
-  left: 80%;
-} */
+
 .popup_info {
   cursor: default;
   display: flex;
