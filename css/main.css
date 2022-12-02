@@ -33,6 +33,9 @@ nav {
 .btn_container .mobile {
   display: none;
 }
+.mobile {
+  display: none;
+}
 .container {
   padding: auto 5%;
 }
@@ -896,3 +899,24 @@ a.left.nav-link {
   top: 28%;
   left: 80%;
 } */
+.popup_info {
+  cursor: default;
+  display: flex;
+  gap: 15px;
+  background-color: #f7d590e1;
+  padding: 30px;
+  width: 360px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: -5px;
+  transition: width 3s;
+}
+.popup_info_close {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-left: -10px;
+  /* margin: 0; */
+}

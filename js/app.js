@@ -19,6 +19,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  clearMessage();
 };
 
 // When the user clicks anywhere outside of the modal, close it
@@ -26,6 +27,7 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+  clearMessage();
 };
 
 function appendCat(cats) {
@@ -169,9 +171,7 @@ function showDetailView(id) {
         </p> 
         <p style="text-align:justify">${catToShow.description}</p>
       </div>
-      <div id="image" class="detail_desktop"><img src="${
-        catToShow.image
-      }"></div>
+      <div id="image" class="desktop"><img src="${catToShow.image}"></div>
     </div>
     <br>
     <div class=detail_card_btn_container>
@@ -265,3 +265,20 @@ async function submitForm() {
     }
   }
 }
+document
+  .querySelector(".popup_info_close")
+  .addEventListener("click", function ClosePopUp() {
+    let box = document.querySelector(".popup_info");
+    box.style.width = "0";
+    console.log(box.style.width);
+    if (box.style.width == "0px") {
+      document.querySelector(".popup_info").style.transform =
+        "translateX(55px)";
+      // document.querySelector(".popup_info h4").style.transitionproperty =
+      //   "margin-left";
+      document.querySelector(".popup_info h4").style.transitiondelay = "250ms";
+    }
+    //box.style.visibility = "hidden";
+    //box.style.transform = "translateX(50%)";
+    console.log("close pop up func");
+  });

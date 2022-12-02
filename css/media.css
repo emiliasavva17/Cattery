@@ -26,6 +26,9 @@
   .contact_section .round_container {
     min-width: 85%;
   }
+  .popup_info {
+    width: 190px;
+  }
 }
 @media (max-width: 1200px) {
   .news_cards {
@@ -33,8 +36,11 @@
   }
 }
 @media (max-width: 850px) {
-  .detail_desktop {
+  .desktop {
     display: none;
+  }
+  .mobile {
+    display: inline;
   }
   .detail_mobile {
     display: block;
