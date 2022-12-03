@@ -255,6 +255,8 @@ function clearMessage() {
     lastName.classList.remove("error-border");
     email.classList.remove("error-border");
   }
+  document.querySelector(".submit_form").style.display = "block";
+  document.querySelector(".succeseful_message").style.display = "none";
 }
 function emailIsValid(email) {
   let pattern = /\S+@\S+\.\S+/;
