@@ -147,7 +147,12 @@ function parentCard(id) {
 }
 function showDetailView(id) {
   const catToShow = _cats.find((cat) => cat.id === id);
-
+  let mom_id = catToShow.mom_id;
+  let dad_id = catToShow.dad_id;
+  console.log(dad_id);
+  const mom = _cats.find((cat) => catToShow.id === mom_id);
+  const dad = _cats.find((cat) => catToShow.id === dad_id);
+  console.log(dad);
   navigateTo(`#/detail-view`);
   // document.querySelector("#detail-view .title").innerHTML = productToShow.model;
   document.querySelector("#detail-view-container").innerHTML = /*html*/ `
@@ -164,7 +169,18 @@ function showDetailView(id) {
         <p><b>Birth: </b> ${catToShow.birth}<br>
           <b>Color: </b> ${catToShow.Color}<br>
           <b>Gender: </b> ${catToShow.gender}<br>
-          <b>Litter: </b> ${catToShow.Litter}<br>
+          <b>Litter: </b> ${catToShow.Litter}<br></p> 
+            <p class='exclude_line'>Parents: </p>  
+            
+              <div class='parents'>
+                <div class="father"> Father -<b> <span style="color:#4792b1"  > ${
+                  dad.name
+                }</span> </b></div>
+                <div class="hide_father">${parentCard(dad.id)}</div>
+
+                
+                </div>
+               
           <b>Status: <span class='${catToShow.status}'>${
     catToShow.status
   }</span></b> 
