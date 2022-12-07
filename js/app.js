@@ -8,6 +8,7 @@ async function initApp() {
   _cats = await fetchData();
 
   appendCat(_cats);
+  console.log("test");
 }
 initApp();
 
