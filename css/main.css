@@ -948,3 +948,8 @@ details[open] {
   border-bottom: 1px solid #aaa;
   margin-bottom: 0.5em;
 }
+.contact_info_container a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
