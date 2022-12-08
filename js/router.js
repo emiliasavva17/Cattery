@@ -13,6 +13,19 @@ const _routes = {
   "#/AboutUs": "AboutUs",
   "#/Contact": "Contact",
   "#/detail-view": "detail-view",
+  "#/detail-view/1": "./detail-view.html",
+  "#/detail-view/2": "detail-view",
+  "#/detail-view/3": "detail-view",
+  "#/detail-view/4": "detail-view",
+  "#/detail-view/5": "detail-view",
+  "#/detail-view/6": "detail-view",
+  "#/detail-view/7": "detail-view",
+  "#/detail-view/8": "detail-view",
+  "#/detail-view/9": "detail-view",
+  "#/detail-view/10": "detail-view",
+  "#/detail-view/11": "detail-view",
+  "#/detail-view/12": "detail-view",
+  "#/detail-view/13": "detail-view",
 };
 const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
@@ -48,9 +61,9 @@ function showPage(path) {
     document.querySelector(".back").style.display = "none";
   }
   console.log(_routes[path]);
-  if (_routes[path] != "Kittens") {
-    window.scrollTo(0, 0);
-  }
+  // if (_routes[path] != "Kittens") {
+  // }
+  window.scrollTo(0, 0);
   document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
 
   setActiveTab(path);

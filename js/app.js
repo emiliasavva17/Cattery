@@ -167,7 +167,7 @@ function showDetailView(id) {
   const mom = _cats.find((cat) => cat.id === mom_id);
   const dad = _cats.find((cat) => cat.id === dad_id);
 
-  navigateTo(`#/detail-view`);
+  navigateTo(`#/detail-view/${catToShow.id}`);
   // document.querySelector("#detail-view .title").innerHTML = productToShow.model;
   document.querySelector("#detail-view-container").innerHTML = /*html*/ `
     <div class="info_container ">
@@ -239,7 +239,7 @@ function showDetailView(id) {
 function showDetailViewCat(id) {
   const catToShow = _cats.find((cat) => cat.id === id);
   console.log(catToShow);
-  navigateTo(`#/detail-view`);
+  navigateTo(`#/detail-view/${catToShow.id}`);
   // document.querySelector("#detail-view .title").innerHTML = productToShow.model;
   document.querySelector("#detail-view-container").innerHTML = /*html*/ `
     <div class="info_container ">
@@ -357,3 +357,33 @@ document
       document.querySelector(".popup_info").style.transitiondelay = "250ms";
     }
   });
+
+//document.querySelector(".kitten_news_btn").addEventListener("click", testFunc);
+
+let navigateBtns = document.querySelectorAll(
+  ".navigateToSpecificPartOfAnotherPage"
+);
+
+for (btn of navigateBtns) {
+  btn.addEventListener("click", otherTest);
+}
+
+function otherTest() {
+  let navigateToPath = this.getAttribute("data-navigateTo");
+  let navigateToSection = this.getAttribute("data-navigateToSection");
+
+  navigateTo(navigateToPath);
+
+  var elem = document.querySelector(`${navigateToSection}`);
+  elem.scrollIntoView();
+}
+function testFunc() {
+  navigateTo("#/Adoption");
+
+  var elem = document.querySelector(".adoption_section4");
+  elem.scrollIntoView();
+  //window.location.hash = `#/Adoption/#Adoption`;
+  console.log(window.location.href);
+
+  console.log("kitten_news_btn testy test");
+}

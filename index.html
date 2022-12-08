@@ -148,7 +148,13 @@
               </p>
             </div>
 
-            <a href="#/Kittens"> <button>Read more</button></a>
+            <button
+              data-navigateTo="#/Kittens"
+              data-navigateToSection=".previous_litters"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Read more
+            </button>
           </div>
 
           <div class="card minusTop space_bottom">
@@ -163,7 +169,7 @@
               </p>
             </div>
 
-            <a href="#/Adoption#Adoption"> <button>Read more</button></a>
+            <a href="#/Adoption"> <button>Read more</button></a>
           </div>
         </div>
       </section>
@@ -188,7 +194,13 @@
               </p>
             </div>
 
-            <button>Read more</button>
+            <button
+              data-navigateTo="#/Kittens"
+              data-navigateToSection=".kittens_for_adoption"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Read more
+            </button>
           </div>
 
           <div class="card space_bottom">
@@ -208,12 +220,18 @@
               </p>
             </div>
 
-            <button>Read more</button>
+            <button
+              data-navigateTo="#/KingsAndQueens"
+              data-navigateToSection=".queen"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Read more
+            </button>
           </div>
         </div>
       </section>
       <section class="general_margin">
-        <h1>Testimonials</h1>
+        <h1 class="testimonials">Testimonials</h1>
         <div class="cat_cards ">
           <div class="card space_bottom">
             <div>
@@ -385,7 +403,10 @@
               well-being is our top priority.
             </p>
             <hr />
-            <p style="color: #001CB3; font-weight: 800;">
+            <p
+              style="color: #001CB3; font-weight: 800;"
+              class="AdoptionRulesAnchor"
+            >
               Therefore, we reserve the right to refuse an adoption if we deem
               it necessary.
             </p>
@@ -411,7 +432,7 @@
                 <li>pedigree (proof of registration)</li>
                 <li>copy of parent's genetic testing</li>
                 <li>microchip</li>
-                <li>kitten kit</li>
+                <li class="PriceAnchor">kitten kit</li>
               </ul>
             </div>
             <img src="img/adoption section2.png" alt="" />
@@ -419,7 +440,7 @@
         </div>
       </section>
 
-      <section class="general_margin center about_section2">
+      <section class="general_margin center about_section2 price">
         <div class="round_container">
           <h1>PRICE</h1>
           <hr />
@@ -455,7 +476,7 @@
               gender and color you prefer in your kitten.
             </p>
             <hr />
-            <p>
+            <p id="newsAdoptionLink">
               Choose a kitten. This can be done either by checking our available
               kittens, or by contacting us - we can tell you about the kittens
               in the cattery, when are the next litters planned, write down your
@@ -744,6 +765,134 @@
     </div>
 
     <footer class="center">
+      <!-- <div class="general_margin"> -->
+      <div class="footer_cols ">
+        <div>
+          <h3>About Us</h3>
+          <ul>
+            <li
+              data-navigateTo="#/AboutUs"
+              data-navigateToSection=".yellow_container"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Who we are
+            </li>
+            <li
+              data-navigateTo="#/"
+              data-navigateToSection=".our_kingdom_container"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Our Kingdom
+            </li>
+            <li
+              data-navigateTo="#/"
+              data-navigateToSection=".news"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              News
+            </li>
+            <li
+              data-navigateTo="#/"
+              data-navigateToSection=".testimonials"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Testimonials
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Our Cats</h3>
+          <ul>
+            <li
+              data-navigateTo="#/KingsAndQueens"
+              data-navigateToSection=".kings"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              King
+            </li>
+            <li
+              data-navigateTo="#/KingsAndQueens"
+              data-navigateToSection=".queen"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Queens
+            </li>
+            <li
+              data-navigateTo="#/Kittens"
+              data-navigateToSection=".kittens_for_adoption"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Kittens
+            </li>
+            <li
+              data-navigateTo="#/Kittens"
+              data-navigateToSection=".previous_litters"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Previous Litters
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Adoption</h3>
+          <ul>
+            <li
+              data-navigateTo="#/Adoption"
+              data-navigateToSection=".adoption_section4"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Process of Adoption
+            </li>
+            <li
+              data-navigateTo="#/Adoption"
+              data-navigateToSection=".adoption_section2"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Requirements
+            </li>
+            <li
+              data-navigateTo="#/Adoption"
+              data-navigateToSection=".AdoptionRulesAnchor"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Adoption Rules
+            </li>
+            <li
+              data-navigateTo="#/Adoption"
+              data-navigateToSection=".PriceAnchor"
+              class="navigateToSpecificPartOfAnotherPage"
+            >
+              Prices
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contct Us</h3>
+          <ul>
+            <li>
+              <a href="tel:+330651971769">(+33) 06 51971769 </a><br />
+              <a href="tel:+330145980783">(+33) 0145 98 07 83 </a>
+            </li>
+            <li><a href="mailto:mefer@free.fr">mefer@free.fr</a></li>
+            <li>
+              <div class="socials">
+                <a href="https://www.facebook.com/"
+                  ><i class="uil uil-facebook-messenger-alt"></i
+                ></a>
+                <a href="https://instagram.com"
+                  ><i class="uil uil-instagram"></i
+                ></a>
+                <a href="https://web.whatsapp.com/"
+                  ><i class="uil uil-whatsapp"></i
+                ></a>
+              </div>
+            </li>
+            <!-- <li>WhatsApp</li> -->
+          </ul>
+          <!-- </div> -->
+        </div>
+      </div>
+
       <img src="img/certification.png" alt="" />
       <p id="copyright">&copy; 2022 Royaume de Nefer</p>
     </footer>

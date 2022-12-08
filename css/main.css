@@ -5,6 +5,7 @@ html,
 body {
   margin: 0;
   height: 100%;
+  cursor: default;
 }
 body,
 div,
@@ -380,6 +381,37 @@ footer img {
 }
 footer p {
   margin: 10px 0 0 0;
+}
+footer div {
+  width: 100%;
+}
+.footer_cols {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  grid-gap: 12%;
+}
+.footer_cols div {
+  max-width: 150px;
+  text-align: left;
+}
+.footer_cols h3 {
+  font-family: "Arkhip", sans-serif;
+  margin-bottom: -4px;
+}
+.footer_cols ul {
+  cursor: pointer;
+  list-style: none;
+  padding: 0;
+}
+
+.socials {
+  color: inherit;
+  display: flex;
+  gap: 20%;
+  align-items: center;
+  font-size: 20px;
+  /* margin-top: 10px; */
 }
 #copyright {
   text-align: center;
@@ -794,7 +826,8 @@ input[type="submit"] {
   align-items: center;
 }
 
-.general_margin {
+.general_margin,
+.footer_cols {
   margin: 2% 7%;
 }
 
@@ -932,10 +965,9 @@ a.left.nav-link {
   width: 100%;
   justify-content: space-around;
 }
-
-.contact_info_container a {
+a {
   text-decoration: none;
-  color: #000;
+  color: inherit;
   cursor: pointer;
 }
 .detailview {
