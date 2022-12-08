@@ -273,7 +273,7 @@ hr {
   min-height: 160px;
 }
 .news_cards .card h3 {
-  height: auto;
+  height: 50px;
 }
 .news_cards .card h5 {
   margin: 10px auto;
