@@ -142,8 +142,8 @@
     "description": "Cadeyrn is a Seal point male from the litter C of Regina and Rama.His name means 'battle king' in Welsh and it certainly fits. He's very brave and is the first one to explore new things, climb high or investigate the danger. He's not the most social kitten, but loves cuddles. ",
     "availableFrom": "from mid February 2023",
     "price": 1300,
-    "mom_id": 9,
-    "dad_id": 1
+    "mom_id": 4,
+    "dad_id": 3
   },
   {
     "id": 11,
@@ -160,7 +160,7 @@
     "description": "Cairo is a Blue point mitted male from the litter C of Regina and Rama.His name means 'battle king' in Welsh and it certainly fits. He's very brave and is the first one to explore new things, climb high or investigate the danger. He's not the most social kitten, but loves cuddles.",
     "availableFrom": "from mid February 2023",
     "price": 1350,
-    "mom_id": 6,
+    "mom_id": 4,
     "dad_id": 3
   },
   {
@@ -178,8 +178,8 @@
     "description": "Cleopatra is a Seal point Bicolor female from litter C of Regina and Rama.<br> She is the princess of the litter, knowing exactly how to use her cuteness to get her extra treats and cuddles. <br> Cleo is very affectionate and once she decides your her human, she's never letting you out of her sight.",
     "availableFrom": "from mid February 2023",
     "price": 1500,
-    "mom_id": 7,
-    "dad_id": 1
+    "mom_id": 4,
+    "dad_id": 3
   },
   {
     "id": 13,
