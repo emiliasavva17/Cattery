@@ -167,7 +167,7 @@ function showDetailView(id) {
   const mom = _cats.find((cat) => cat.id === mom_id);
   const dad = _cats.find((cat) => cat.id === dad_id);
 
-  navigateTo(`#/detail-view/${catToShow.id}`);
+  navigateTo(`#/detail-view`);
   // document.querySelector("#detail-view .title").innerHTML = productToShow.model;
   document.querySelector("#detail-view-container").innerHTML = /*html*/ `
     <div class="info_container ">
@@ -238,8 +238,8 @@ function showDetailView(id) {
 }
 function showDetailViewCat(id) {
   const catToShow = _cats.find((cat) => cat.id === id);
-  console.log(catToShow);
-  navigateTo(`#/detail-view/${catToShow.id}`);
+
+  navigateTo(`#/detail-view`);
   // document.querySelector("#detail-view .title").innerHTML = productToShow.model;
   document.querySelector("#detail-view-container").innerHTML = /*html*/ `
     <div class="info_container ">
