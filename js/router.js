@@ -3,7 +3,7 @@
  * "path": "id of page in DOM"
  */
 const _routes = {
-  "#/": "home",
+  "/": "home",
   "#/page2": "page2",
   // "#/OurCats": "OurCats",
 
@@ -11,11 +11,11 @@ const _routes = {
   "#/Kittens": "Kittens",
   "#/Adoption": "Adoption",
   "#/AboutUs": "AboutUs",
-  "#/Contact": "Contact",
+  "/Contact": "Contact",
   "#/detail-view": "detail-view",
 };
 const _pages = document.querySelectorAll(".page");
-const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
+//const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
 const _navLinks = document.querySelectorAll(".nav-link");
 
 /**
@@ -31,7 +31,7 @@ function hideAllPages() {
  * Navigating SPA to specific page by given path
  */
 function navigateTo(path) {
-  window.history.pushState({}, path, _basePath + path);
+  window.history.pushState({}, path, location.origin+ path);
   showPage(path);
 }
 
@@ -88,11 +88,11 @@ function attachNavLinkEvents() {
  */
 function initRouter() {
   attachNavLinkEvents();
-  window.addEventListener("popstate", () => showPage(location.hash)); // change page when using back and forth in browser
+  window.addEventListener("popstate", () => showPage(location.pathname)); // change page when using back and forth in browser
 
-  let path = "#/"; // default path
-  if (_routes[location.hash]) {
-    path = location.hash;
+  let path = "/"; // default path
+  if (_routes[location.pathname]) {
+    path = location.pathname;
   }
   navigateTo(path);
 }
