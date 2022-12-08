@@ -3,7 +3,7 @@
  * "path": "id of page in DOM"
  */
 const _routes = {
-  "/": "home",
+  "#/": "home",
   "#/page2": "page2",
   // "#/OurCats": "OurCats",
 
@@ -11,7 +11,7 @@ const _routes = {
   "#/Kittens": "Kittens",
   "#/Adoption": "Adoption",
   "#/AboutUs": "AboutUs",
-  "/Contact": "Contact",
+  "#/Contact": "Contact",
   "#/detail-view": "detail-view",
 };
 const _pages = document.querySelectorAll(".page");
