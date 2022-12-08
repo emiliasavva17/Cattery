@@ -48,7 +48,11 @@ function showPage(path) {
     document.querySelector(".back").style.display = "none";
   }
   console.log(_routes[path]);
+  if (_routes[path] != "Kittens") {
+    window.scrollTo(0, 0);
+  }
   document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
+
   setActiveTab(path);
 }
 

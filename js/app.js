@@ -8,6 +8,7 @@ async function initApp() {
   _cats = await fetchData();
 
   appendCat(_cats);
+  console.log("test");
 }
 initApp();
 
@@ -43,8 +44,10 @@ function appendCat(cats) {
     if (cat.who != "kitten") {
       //creating person data, HTML tags and adding to the DOM, the element
       let insert = document.querySelector(`#${cat.who}`);
+      console.log(cat.id, "  ", cat.name);
       insert.innerHTML += /*html*/ `
-        <div class="card ourCatCard">
+        <div class="card ourCatCard" id="${cat.id +
+          cat.name}"  onclick="showDetailViewCat(${cat.id})">
           <h3>${cat.name} </h3>
           <hr>
           <img src="${cat.image}" class="gradient_img" alt="">
@@ -65,7 +68,8 @@ function appendCat(cats) {
         const dad = _cats.find((cat) => cat.id === dad_id);
 
         document.querySelector("#kittens_for_adoption").innerHTML += /*html*/ `
-        <div class="card space_bottom kitten_card" id="${cat.id + cat.name}" >
+        <div class="card space_bottom kitten_card" id="${cat.id +
+          cat.name}"  onclick="showDetailView(${cat.id})">
           <div>
             <h3>${cat.name} </h3>
             <hr>
@@ -81,7 +85,7 @@ function appendCat(cats) {
           cat.status
         }</span></b> <br>
             
-            <p class='exclude_line'>Parents: </p>  
+            <b>Parents: </b>  
             
               <div class='parents'>
                 <div class="father"> Father -<b> <span style="color:#4792b1"  > ${
@@ -215,6 +219,41 @@ function showDetailView(id) {
   btn.onclick = function() {
     modal.style.display = "block";
   };
+}
+function showDetailViewCat(id) {
+  const catToShow = _cats.find((cat) => cat.id === id);
+
+  navigateTo(`#/detail-view`);
+  // document.querySelector("#detail-view .title").innerHTML = productToShow.model;
+  document.querySelector("#detail-view-container").innerHTML = /*html*/ `
+    <div class="info_container ">
+      <div class="pyramids_H1">
+        <img class="pyramid" src="img/Component 13 – 2.png" alt="" />
+        <p class="pagesH1">${catToShow.name}</p>
+        <img class="pyramid" src="img/Component 13 – 2.png" alt="" />
+    </div> 
+    </div> <br>
+    <div class="round_container detail_card">
+    <div id="image"class="detail_mobile " ><img src="${catToShow.image}" ></div>
+      <div id='text'>
+      <div  class="old_cat_detail_view">
+       <p>
+          <b>Birth: </b> ${catToShow.birth}<br>
+          <b>Cattery: </b> ${catToShow.Cattery}<br>
+          <b>Color: </b> ${catToShow.Color}<br>
+          <b>SQR LOOF: </b> ${catToShow.SQR_LOOF}<br>
+          <b>FIV/FELV test: </b> ${catToShow.FELV_test}<br>
+          <b>HCM/PKD test: </b> ${catToShow.PKD_test}<br>  
+          </p>
+          <br>   
+      </div>   </div>
+      <div id="image" class="desktop"><img src="${catToShow.image}"></div>
+    </div>
+    <br>
+  
+     <div class="divider" style='margin-top:-80px'></div>
+
+     `;
 }
 
 const firstName = document.querySelector("#firstName");
