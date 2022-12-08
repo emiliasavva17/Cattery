@@ -11,7 +11,7 @@ const _routes = {
   "#/Kittens": "Kittens",
   "#/Adoption": "Adoption",
   "#/AboutUs": "AboutUs",
-  "#/Contact": "Contact",
+  "/Contact": "Contact",
   "#/detail-view": "detail-view",
 };
 const _pages = document.querySelectorAll(".page");
