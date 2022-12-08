@@ -8,7 +8,6 @@ async function initApp() {
   _cats = await fetchData();
 
   appendCat(_cats);
-  console.log("test");
 }
 initApp();
 
@@ -40,11 +39,11 @@ function appendCat(cats) {
 
     if (cat.who == "king") king = true;
     if (cat.who == "queen") queen = true;
-
+    let x = 12;
     if (cat.who != "kitten") {
       //creating person data, HTML tags and adding to the DOM, the element
       let insert = document.querySelector(`#${cat.who}`);
-      console.log(cat.id, "  ", cat.name);
+
       insert.innerHTML += /*html*/ `
         <div class="card ourCatCard" id="${cat.id +
           cat.name}"  onclick="showDetailViewCat(${cat.id})">
@@ -68,41 +67,53 @@ function appendCat(cats) {
         const dad = _cats.find((cat) => cat.id === dad_id);
 
         document.querySelector("#kittens_for_adoption").innerHTML += /*html*/ `
-        <div class="card space_bottom kitten_card" id="${cat.id +
-          cat.name}"  onclick="showDetailView(${cat.id})">
-          <div>
+        <div class="card space_bottom kitten_card" id="${cat.id + cat.name}"  >
+          <div class="detailview" onclick="showDetailView(${cat.id})">
             <h3>${cat.name} </h3>
             <hr>
             <img src="${cat.image}" class="gradient_img" alt="">
             <br><hr>
-            <div class="card_text">
-              <b>Birth: </b> ${cat.birth}<br>
-              <b>Color: </b> ${cat.Color}<br>
-              <b>Gender: </b> ${cat.gender}<br>
-              <b>Litter: </b> ${cat.Litter}<br>
-              <b>Available: </b> ${cat.availableFrom} <br>
-              <b>Status: <span class='${cat.status}'>${
+                <div class="card_text">
+                  <b>Birth: </b> ${cat.birth}<br>
+                  <b>Color: </b> ${cat.Color}<br>
+                  <b>Gender: </b> ${cat.gender}<br>
+                  <b>Litter: </b> ${cat.Litter}<br>
+                  <b>Available: </b> ${cat.availableFrom} <br>
+                  <b>Status: <span class='${cat.status}'>${
           cat.status
         }</span></b> <br>
+                </div>
+          </div>
             
-            <b>Parents: </b>  
+              <b style="text-align:left;padding-left: 40px;" >Parents: </b>
             
-              <div class='parents'>
-                <div class="father"> Father -<b> <span style="color:#4792b1"  > ${
-                  dad.name
-                }</span> </b></div>
+              <div class='parents' style="text-align:left;">
+                <div class="father" onclick="showDetailViewCat(${
+                  dad.id
+                })"> Father -<b> <span style="color:#4792b1"> ${
+          dad.name
+        }</span> </b></div>
                 <div class="hide_father">${parentCard(dad.id)}</div>
 
-                <div class="mother"> Mother - <b><span style="color:#B22222 " > ${
-                  mom.name
-                }</span> </b></div>
+                <div class="mother" onclick="showDetailViewCat(${
+                  mom.id
+                })"> Mother - <b><span style="color:#B22222 " > ${
+          mom.name
+        }</span> </b></div>
                 <div class="hide_mother">${parentCard(mom.id)}</div>
-                </div>
-                <b>Price: <span style="color:#001667">${cat.price} €</span></b>
               </div>
-            <br>
+              
+            <div class='bootom_kitten_card' style='width:100%' onclick="showDetailView(${
+              cat.id
+            })">
+                <p style="text-align:left;padding-left: 20px;"><b >Price: <span style="color:#001667">${
+                  cat.price
+                } €</span></b> </p>
+            
+          
     
-          <button onclick="showDetailView(${cat.id})">Read more</button>
+            <button onclick="showDetailView(${cat.id})">Read more</button>
+          </div>
         </div>`;
       } else {
         document.querySelector("#previous_litters").innerHTML += /*html*/ `
@@ -176,20 +187,25 @@ function showDetailView(id) {
           <b>Status: <span class='${catToShow.status}'>${
     catToShow.status
   }</span></b> 
+          <b>Price: <span style="color:#001667">${catToShow.price} €</span></b> 
         </p> 
         <p style="text-align:justify">${catToShow.description}</p>
 
         <p style="text-align:center">Parents: </p>  
             
               <div class='parents'>
-                <div class="father"> Father -<b> <span style="color:#4792b1"  > ${
-                  dad.name
-                }</span> </b></div>
+                <div class="father" onclick="showDetailViewCat(${
+                  dad.id
+                })"> Father -<b> <span style="color:#4792b1"  > ${
+    dad.name
+  }</span> </b></div>
                 <div class="hide_father">${parentCard(dad.id)}</div>
 
-                <div class="mother"> Mother - <b><span style="color:#B22222 " > ${
-                  mom.name
-                }</span> </b></div>
+                <div class="mother" onclick="showDetailViewCat(${
+                  mom.id
+                })"> Mother - <b><span style="color:#B22222 " > ${
+    mom.name
+  }</span> </b></div>
                 <div class="hide_mother">${parentCard(mom.id)}</div>
                 </div>
 
@@ -222,7 +238,7 @@ function showDetailView(id) {
 }
 function showDetailViewCat(id) {
   const catToShow = _cats.find((cat) => cat.id === id);
-
+  console.log(catToShow);
   navigateTo(`#/detail-view`);
   // document.querySelector("#detail-view .title").innerHTML = productToShow.model;
   document.querySelector("#detail-view-container").innerHTML = /*html*/ `
@@ -246,6 +262,7 @@ function showDetailViewCat(id) {
           <b>HCM/PKD test: </b> ${catToShow.PKD_test}<br>  
           </p>
           <br>   
+          <p style="text-align:justify">${catToShow.description}</p>
       </div>   </div>
       <div id="image" class="desktop"><img src="${catToShow.image}"></div>
     </div>
