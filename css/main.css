@@ -392,7 +392,7 @@ footer div {
   grid-gap: 12%;
 }
 .footer_cols div {
-  max-width: 150px;
+  max-width: 170px;
   text-align: left;
 }
 .footer_cols h3 {
@@ -513,7 +513,8 @@ footer div {
   background-color: #f7d590;
 }
 .Adoption_contactUs button:hover {
-  background: linear-gradient(0.25turn, #001cb3, #2493b4);
+  background-color: #dec082;
+  /* background: linear-gradient(0.25turn, #001cb3, #2493b4); */
 }
 .ourCatP {
   max-width: 60%;
